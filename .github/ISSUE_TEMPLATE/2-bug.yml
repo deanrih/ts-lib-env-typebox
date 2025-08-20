@@ -1,0 +1,59 @@
+name: Bug Report
+description: Report an issue that is considered a bug in the actual code behaviour/functionality and should be fixed
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a bug report. Make sure you are using the latest version.
+
+  - type: textarea
+    attributes:
+      label: What version are you using?
+      description: Provide the package/library version that is being used.
+      placeholder: 1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What are the stepts to replicate the bug?
+      description: Explain the bug, code snippet, step by step, actual and expected output.
+      placeholder: |
+        # Explanation
+
+        When being used to accelerate a particle to near speed of light, a random Windows machine somewhere in the universe crashed in a BSoD.
+
+        # Steps to replicate
+
+        1. Add/install package/library
+        2. Accelerate particles
+        3. Generate TOTP
+        4. ???
+        5. Profit?
+
+        # Actual Result
+
+        Some random Windows machine crashed
+
+        # Expected Result
+
+        Should return the generated One-Time Password
+
+        # Code Snippet
+
+        ```ts
+        import { accelerateParticle } from "some-accelerator-lib";
+        import { generateTOTP } from "@deanrih/totp-ts";
+
+        await accelerateParticle(() => {
+          const code = generateTOTP("MySuperSecretKey");
+        });
+        ````
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional information

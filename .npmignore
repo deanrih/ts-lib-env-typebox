@@ -1,0 +1,16 @@
+.git
+.github
+.gitignore
+.vscode
+
+build.ts
+bun.lockb
+tsconfig.json
+biome.json
+
+*.tgz
+
+node_modules
+example
+test
+src

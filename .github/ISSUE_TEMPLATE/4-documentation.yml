@@ -1,0 +1,36 @@
+name: Documentation Problem
+description: Report some missing/incorrect/inconsistent documentation
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a documentation problem report.
+
+  - type: dropdown
+    attributes:
+      label: What is the type of the problem with the documentation?
+      multiple: true
+      options:
+        - Missing
+        - Incorrect
+        - Inconsistent
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What is the problem?
+      description: Explain the problem and where the problem found.
+      placeholder: |
+        # Explanation
+
+        ...
+
+        # WHere
+
+        ...
+    validations:
+      required: true

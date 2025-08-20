@@ -1,0 +1,61 @@
+{
+	"name": "@deanrih/ts-lib-env-typebox",
+	"version": "1.0.0",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"type": "module",
+	"license": "MIT",
+	"homepage": "https://deanrih.id/projects/self/ts-lib-env-typebox",
+	"description": "A helper library for parsing env with a schema with enforced validation.",
+	"readme": "./README.md",
+	"author": {
+		"name": "deanrih",
+		"url": "https://github.com/deanrih"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/deanrih/ts-lib-env-typebox"
+	},
+	"bugs": {
+		"url": "https://github.com/deanrih/ts-lib-env-typebox/issues"
+	},
+	"keywords": [
+		"ENV",
+		"ENV Validation",
+		"ENV Schema",
+		"TypeBox"
+	],
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "bun run --watch ./example/index.example.ts",
+		"case:dev": "bun run --watch ./example/case.example.ts",
+		"test": "bun test",
+		"build": "bun ./build.ts",
+		"release": "bun run test && bun run build && bun publish"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.0",
+		"@types/bun": "latest",
+		"tsup": "^8.5.0",
+		"typescript": "^5.9.2"
+	},
+	"peerDependencies": {
+		"@sinclair/typebox": "^0.34.40",
+		"exact-mirror": "^0.1.6"
+	}
+}

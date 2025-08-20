@@ -1,0 +1,31 @@
+name: Feature Request
+description: Suggest/Request a feature or an enhancement
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a feature request.
+
+  - type: textarea
+    attributes:
+      label: What is the problem that is being solved?
+      description: Explain the problem you are currently have that necessitates this request.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: What is the proposal that aim to solve the problem?
+      description: Describe the proposed idea/suggestion that aim to solve the problem you are having.
+      placeholder: |
+        # Explanation
+
+        ...
+
+        # Alternative
+
+        ...
+    validations:
+      required: true
