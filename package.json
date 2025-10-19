@@ -1,7 +1,7 @@
 {
 	"name": "@deanrih/ts-lib-env-typebox",
 	"description": "A helper library for parsing env with a schema with enforced validation.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"type": "module",
 	"license": "MIT",
 	"homepage": "https://deanrih.id/projects/self/ts-lib-env-typebox",
