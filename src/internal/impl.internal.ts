@@ -12,7 +12,7 @@
  * @copyright   Dean Rikrik Ichsan Hakiki 2025
  */
 
-import type { StaticDecode, TLiteral, TSchema, TUnion } from "@sinclair/typebox";
+import type { StaticDecode, TLiteral, TSchema, TString, TTransform, TUnion } from "@sinclair/typebox";
 import { Type } from "@sinclair/typebox";
 import { Value } from "@sinclair/typebox/value";
 
@@ -23,7 +23,7 @@ import { Value } from "@sinclair/typebox/value";
  * //input string
  * const input = "key-1;key-2;env-variable;enable-incremental-build;";
  */
-const StringArray = Type.Transform(Type.String())
+const StringArray: TTransform<TString, string[]> = Type.Transform(Type.String())
 	.Decode((value) => value.toLowerCase().split(";").filter(Boolean))
 	.Encode((value) => value.join(";"));
 
