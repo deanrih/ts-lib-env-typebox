@@ -1,13 +1,13 @@
 {
 	"compilerOptions": {
-		// Enable latest features
+		// Environment setup & latest features
 		"lib": [
-			"ESNext",
+			"ESNext"
 		],
+		"module": "ESnext",
 		"target": "ESNext",
-		"module": "ESNext",
 		"moduleDetection": "force",
-		"jsx": "react-jsx",
+		"jsx": "preserve",
 		"allowJs": true,
 		// Bundler mode
 		"moduleResolution": "bundler",
@@ -18,9 +18,42 @@
 		"strict": true,
 		"skipLibCheck": true,
 		"noFallthroughCasesInSwitch": true,
+		// "noUncheckedIndexedAccess": true,
 		// Some stricter flags (disabled by default)
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noPropertyAccessFromIndexSignature": true
-	}
+		"noPropertyAccessFromIndexSignature": true,
+		// Custom
+		"allowSyntheticDefaultImports": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"composite": true,
+		"downlevelIteration": false,
+		"importHelpers": true,
+		"incremental": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUncheckedSideEffectImports": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		// "skipDefaultLibCheck": true,
+		"strictBindCallApply": true,
+		// Path
+		"baseUrl": ".",
+		"paths": {
+			"~/*": [
+				"src/*"
+			]
+		}
+	},
+	"include": [
+		"src/**/*.ts",
+		"test/**/*.ts",
+	],
+	"exclude": [
+		"node_modules"
+	]
 }
